@@ -18,7 +18,7 @@ const app = express();
 //     credentials: true                
 //   }));
 const corsOptions = {
-    origin: ['http://localhost:4200', 'https://your-vercel-domain.vercel.app'],
+    origin: ['http://localhost:4200', 'https://jamfuraque-employee-management.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
