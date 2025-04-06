@@ -1,0 +1,106 @@
+{
+  "hash": "82e345c8",
+  "configHash": "0f8e5a7b",
+  "lockfileHash": "b1f6033a",
+  "browserHash": "df80f302",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "e1887e20",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "3735a9d9",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "24ed40c0",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "651b0f1e",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "63a3580b",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
+      "file": "@angular_platform-browser_animations.js",
+      "fileHash": "9bdc1347",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "a4e42a0e",
+      "needsInterop": false
+    },
+    "@apollo/client/core": {
+      "src": "../../../../../../node_modules/@apollo/client/core/index.js",
+      "file": "@apollo_client_core.js",
+      "fileHash": "02dfd953",
+      "needsInterop": false
+    },
+    "apollo-angular": {
+      "src": "../../../../../../node_modules/apollo-angular/fesm2022/ngApollo.mjs",
+      "file": "apollo-angular.js",
+      "fileHash": "d7d968ce",
+      "needsInterop": false
+    },
+    "apollo-angular/http": {
+      "src": "../../../../../../node_modules/apollo-angular/fesm2022/ngApolloLinkHttp.mjs",
+      "file": "apollo-angular_http.js",
+      "fileHash": "e7ad6c5f",
+      "needsInterop": false
+    },
+    "graphql-tag": {
+      "src": "../../../../../../node_modules/graphql-tag/lib/index.js",
+      "file": "graphql-tag.js",
+      "fileHash": "c179e60c",
+      "needsInterop": false
+    },
+    "rxjs/operators": {
+      "src": "../../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
+      "file": "rxjs_operators.js",
+      "fileHash": "8fd6e171",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-WHIQJJNI": {
+      "file": "chunk-WHIQJJNI.js"
+    },
+    "chunk-3TU2YYTQ": {
+      "file": "chunk-3TU2YYTQ.js"
+    },
+    "chunk-NN6DAC7L": {
+      "file": "chunk-NN6DAC7L.js"
+    },
+    "chunk-7Y6NTTLE": {
+      "file": "chunk-7Y6NTTLE.js"
+    },
+    "chunk-CCORQA5I": {
+      "file": "chunk-CCORQA5I.js"
+    },
+    "chunk-KPQ3HN2T": {
+      "file": "chunk-KPQ3HN2T.js"
+    },
+    "chunk-Z2TEWN47": {
+      "file": "chunk-Z2TEWN47.js"
+    },
+    "chunk-L3TH4L7L": {
+      "file": "chunk-L3TH4L7L.js"
+    }
+  }
+}
