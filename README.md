@@ -16,6 +16,11 @@ It allows users to:
 - Search employees by department or designation
 
 ---
+## 🌍 Live Deployment Links
+- [Frontend](https://jamfuraque-employee-management.vercel.app)
+- [Backend](https://jamfuraque-assignment2-backend.onrender.com/graphql)
+
+---
 
 ## 🔧 Technologies Used
 
@@ -52,16 +57,17 @@ You can use this test account to log in:
 git clone https://github.com/jamdazai/101382608_comp3133_assignment2.git
 cd 101382608_comp3133_assignment2
 
-Start the Backend:
+# Start the Backend:
 cd backend
 npm install
 npm start
-Then the backend will run on: http://localhost:4000/graphql
+# Runs at: http://localhost:4000/graphql
 
+# Start the Frontend:
 cd frontend
 npm install
 ng serve
-The frontend will run on: http://localhost:4200
+# Runs at: http://localhost:4200
 ```
 
 ## ✨ Features
