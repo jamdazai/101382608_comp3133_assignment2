@@ -1,0 +1,369 @@
+/* @author: Jam Furaque */
+/* Main Content Wrapper */
+.content-wrapper {
+  padding: 2rem;
+}
+  
+.employee-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+  
+.search-add-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+  
+.search-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+  
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.table-container table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+  
+.table-container thead {
+  position: sticky;
+  top: 0;
+  background-color: #343a40;
+  color: white;
+  z-index: 10;
+}
+  
+.table-container th,
+.table-container td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  
+.table-container .text-muted {
+  font-style: italic;
+  color: #888;
+}
+  
+
+.table-container tbody tr:hover {
+  background-color: #f5f5f5;
+}
+  
+.table-container img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.table-container .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+}
+  
+/* search and add */
+.search-add-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+  
+.search-fields input.form-control,
+.search-fields button,
+.add-btn-wrapper button {
+  height: 45px;
+  font-size: 1rem;
+  border-radius: 6px;
+  padding: 0 1rem;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.01);
+}
+  
+  
+.add-btn-wrapper button {
+  white-space: nowrap;
+  font-weight: 500;
+}
+  
+
+.search-fields button,
+.add-btn-wrapper button {
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.add-btn-wrapper {
+  margin-left: auto;
+}
+
+.search-fields input.form-control {
+  min-width: 230px;
+}
+
+
+.search-fields button.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+.search-fields button.btn-success:hover {
+  background-color: #218838;
+}
+
+.search-fields button.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.search-fields button.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.add-btn-wrapper button.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.add-btn-wrapper button.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.table-container td .btn {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.2rem;
+  transition: transform 0.1s ease-in-out;
+}
+
+.table-container td .btn + .btn {
+  margin-left: 0.5rem;
+}
+
+.table-container td .btn:hover {
+  transform: scale(1.2);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+  
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.custom-modal-dialog {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  max-height: 95vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+  
+.custom-modal-header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  cursor: move;
+}
+
+.custom-modal-header h5 {
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+  
+.custom-modal-body {
+  padding: 1.5rem;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  color: #ccc;
+}
+  
+.employee-photo {
+  width: 180px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 1rem auto;
+}
+  
+.employee-info-table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.employee-info-table th {
+  text-align: left;
+  width: 30%;
+  padding: 0.5rem 0.75rem;
+  background-color: #f8f9fa;
+  font-weight: 600;
+  vertical-align: top;
+}
+
+.employee-info-table td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+  
+@media (max-width: 576px) {
+  .employee-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .employee-info-table th,
+  .employee-info-table td {
+    font-size: 0.9rem;
+  }
+}
+
+  
+@media (max-width: 576px) {
+  .custom-modal-body {
+    font-size: 0.9rem;
+  }
+
+  .custom-modal-dialog {
+    width: 95%;
+  }
+}
+
+
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+  
+/* EDIT AND ADD MODAL HUHU*/
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-wrapper .form-control,
+.form-wrapper .form-select {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+  
+.form-wrapper input[type="file"] {
+  padding: 0.4rem;
+}
+
+.form-wrapper .form-select:invalid {
+  color: #6c757d;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+  
+.modal-footer button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  min-width: 140px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  align-items: center;
+  flex: auto;
+}
+
+.modal-footer .btn-success:hover {
+  background-color: #218838;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #5a6268;
+}
+  
+@media (max-width: 576px) {
+  .form-wrapper .form-control,
+  .form-wrapper .form-select {
+    max-width: 100%;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-footer button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* That's everything that took my soul lol I mean my sleepyhead. PS: I really hate designing frontend :( */

@@ -13,10 +13,18 @@ const cors = require('cors');                                   // I INSTALLED C
 require('dotenv').config();                                     // FORGOT THAT I COULD JUST USE POSTMAN LOL
 
 const app = express();
-app.use(cors({
-    origin: 'http://localhost:4200',
-    credentials: true                
-  }));
+// app.use(cors({
+//     origin: 'http://localhost:4200',
+//     credentials: true                
+//   }));
+const corsOptions = {
+    origin: ['http://localhost:4200', 'https://your-vercel-domain.vercel.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+  };
+  app.use(cors(corsOptions));
+  
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 

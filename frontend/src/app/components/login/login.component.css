@@ -1,0 +1,70 @@
+/**
+@author: Jam Furaque
+*/
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 64px);
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+  
+.login-card {
+    max-width: 400px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+  
+.login-card h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+  
+.login-card input {
+    width: 95%;
+    padding: 0.6rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+  
+.login-card button {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+  
+.login-card button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+  
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    color: red;
+    background-color: #ffe0e0;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid red;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.validation {
+    color: red;
+    font-size: 12px;
+}
+  

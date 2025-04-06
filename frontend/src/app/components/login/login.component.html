@@ -1,0 +1,30 @@
+<!-- @auhtor: Jam Furaque-->
+<div class="login-container">
+
+  <div class="login-card">
+
+    <h2>Login</h2>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <input type="text" formControlName="usernameOrEmail" placeholder="Username or Email" />
+
+      <div *ngIf="loginForm.get('usernameOrEmail')?.touched && loginForm.get('usernameOrEmail')?.invalid">
+        <small class="error">Username or Email is required</small>
+      </div>
+
+      <input type="password" formControlName="password" placeholder="Password" />
+
+      <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+        <small class="error">Password must be at least 6 characters</small>
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+    
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </div>
+</div>

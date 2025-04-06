@@ -1,0 +1,149 @@
+
+<!-- @author: Jam Furaque -->
+<div class="content-wrapper">
+  <h2 class="employee-title">Employee List</h2>
+
+<!-- Search and Add Employee Section -->
+  <div class="search-add-container">
+    <div class="search-fields">
+      <input type="text" class="form-control" placeholder="Search by Department" [(ngModel)]="searchDepartment">
+      <input type="text" class="form-control" placeholder="Search by Designation" [(ngModel)]="searchDesignation">
+      <button class="btn btn-success" (click)="searchEmployees()">Search</button>
+      <button class="btn btn-secondary" (click)="clearSearch()">Clear</button>
+    </div>
+    <div class="add-btn-wrapper">
+      <button class="btn btn-primary" (click)="showAddModal = true">Add Employee</button>
+    </div>
+  </div>
+  
+  <div class="table-container">
+    <table class="table table-bordered text-center table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Designation</th>
+          <th>Salary</th>
+          <th>DOJ</th>
+          <th>Department</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="employees.length === 0">
+          <td colspan="9" class="text-center text-muted">No results</td>
+        </tr>
+        <tr *ngFor="let emp of employees" (click)="openViewModal(emp)">
+          <td><img [src]="getEmployeePhotoUrl(emp.employeePhoto)" alt="No Photo"></td>
+          <td>{{ emp.firstName }} {{ emp.lastName }}</td>
+          <td>{{ emp.email }}</td>
+          <td>{{ emp.gender }}</td>
+          <td>{{ emp.designation }}</td>
+          <td>{{ emp.salary }}</td>
+          <td>{{ emp.date_of_joining | date:'mediumDate' }}</td>
+          <td>{{ emp.department }}</td>
+          <td class="sticky-actions" (click)="$event.stopPropagation()">
+            <button class="btn btn-sm btn-primary me-1" (click)="openEditModal(emp)">✏️</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteEmployee(emp._id)">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+      
+    </table>
+  </div>
+</div>
+
+
+<!-- View Modal -->
+<div class="custom-modal-overlay" *ngIf="selectedEmployee && isViewModalOpen" (click)="closeModals()">
+  <div class="custom-modal-dialog" (click)="$event.stopPropagation()" id="draggableModal">
+    <div class="custom-modal-header justify-content-center" id="modalHeader">
+      <h5 class="modal-title m-0">Employee Details</h5>
+      <button class="btn-close position-absolute end-0 me-3" (click)="closeModals()"></button>
+    </div>
+    
+    <div class="custom-modal-body">
+      <div class="text-center mb-3">
+        <img
+        [src]="getEmployeePhotoUrl(selectedEmployee.employeePhoto)"
+        alt="Photo"
+        class="employee-photo"
+      />
+      </div>
+    
+      <table class="employee-info-table">
+        <tr>
+          <th>Name:</th>
+          <td>{{ selectedEmployee.firstName }} {{ selectedEmployee.lastName }}</td>
+        </tr>
+        <tr>
+          <th>Email:</th>
+          <td>{{ selectedEmployee.email }}</td>
+        </tr>
+        <tr>
+          <th>Gender:</th>
+          <td>{{ selectedEmployee.gender }}</td>
+        </tr>
+        <tr>
+          <th>Designation:</th>
+          <td>{{ selectedEmployee.designation }}</td>
+        </tr>
+        <tr>
+          <th>Salary:</th>
+          <td>{{ selectedEmployee.salary }}</td>
+        </tr>
+        <tr>
+          <th>Department:</th>
+          <td>{{ selectedEmployee.department }}</td>
+        </tr>
+      </table>
+    </div>
+    
+  </div>
+</div>
+
+
+<!-- Edit and Add Modal -->
+<div class="custom-modal-overlay" *ngIf="showAddModal" (click)="closeModals()">
+  <div class="custom-modal-dialog" (click)="$event.stopPropagation()" id="draggableModal">
+    <div class="custom-modal-header justify-content-center" id="modalHeader">
+      <h5 class="modal-title m-0">{{ selectedEmployee ? 'Edit Employee' : 'Add Employee' }}</h5>
+      <button class="btn-close position-absolute end-0 me-3" (click)="closeModals()"></button>
+    </div>
+
+    <div class="custom-modal-body">
+      <form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+        <div class="form-wrapper">
+
+          <input class="form-control" placeholder="First Name" formControlName="firstName" />
+          <input class="form-control" placeholder="Last Name" formControlName="lastName" />
+          <input class="form-control" placeholder="Email" formControlName="email" />
+          <select class="form-select" formControlName="gender" required>
+            <option value="" disabled selected hidden>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+          
+          <input class="form-control" placeholder="Designation" formControlName="designation" />
+          <input type="number" class="form-control" placeholder="Salary" formControlName="salary" />
+          <input type="date" class="form-control" formControlName="date_of_joining" />
+          <input class="form-control" placeholder="Department" formControlName="department" />
+          <input type="file" class="form-control" (change)="onFileChange($event)" />
+        </div>
+      
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" [disabled]="employeeForm.invalid">
+            {{ selectedEmployee ? 'Update' : 'Add' }} Employee
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="closeModals()">Cancel</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+  

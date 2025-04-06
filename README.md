@@ -59,7 +59,6 @@ npm start
 Then the backend will run on: http://localhost:4000/graphql
 
 cd frontend
-cd 101382608_comp3133_assignment2
 npm install
 ng serve
 The frontend will run on: http://localhost:4200
